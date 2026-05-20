@@ -1,0 +1,199 @@
+﻿namespace pryCapelloAcademia
+{
+    partial class frmRegistro
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gbRegistro = new System.Windows.Forms.GroupBox();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
+            this.lblCode = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblPlan = new System.Windows.Forms.Label();
+            this.lblActivo = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cboPlan = new System.Windows.Forms.ComboBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnListado = new System.Windows.Forms.Button();
+            this.gbRegistro.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gbRegistro
+            // 
+            this.gbRegistro.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbRegistro.Controls.Add(this.btnListado);
+            this.gbRegistro.Controls.Add(this.btnCancelar);
+            this.gbRegistro.Controls.Add(this.btnRegistrar);
+            this.gbRegistro.Controls.Add(this.cboPlan);
+            this.gbRegistro.Controls.Add(this.txtCode);
+            this.gbRegistro.Controls.Add(this.txtNombre);
+            this.gbRegistro.Controls.Add(this.lblActivo);
+            this.gbRegistro.Controls.Add(this.lblPlan);
+            this.gbRegistro.Controls.Add(this.chkActivo);
+            this.gbRegistro.Controls.Add(this.lblNombre);
+            this.gbRegistro.Controls.Add(this.lblCode);
+            this.gbRegistro.Location = new System.Drawing.Point(36, 42);
+            this.gbRegistro.Name = "gbRegistro";
+            this.gbRegistro.Size = new System.Drawing.Size(248, 229);
+            this.gbRegistro.TabIndex = 0;
+            this.gbRegistro.TabStop = false;
+            this.gbRegistro.Text = "Registro Materia/Asignatura";
+            // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkActivo.Location = new System.Drawing.Point(93, 136);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(15, 14);
+            this.chkActivo.TabIndex = 1;
+            this.chkActivo.UseVisualStyleBackColor = true;
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.Location = new System.Drawing.Point(16, 30);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(46, 15);
+            this.lblCode.TabIndex = 2;
+            this.lblCode.Text = "Código";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(16, 64);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(52, 15);
+            this.lblNombre.TabIndex = 3;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // lblPlan
+            // 
+            this.lblPlan.AutoSize = true;
+            this.lblPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlan.Location = new System.Drawing.Point(16, 100);
+            this.lblPlan.Name = "lblPlan";
+            this.lblPlan.Size = new System.Drawing.Size(32, 15);
+            this.lblPlan.TabIndex = 4;
+            this.lblPlan.Text = "Plan";
+            // 
+            // lblActivo
+            // 
+            this.lblActivo.AutoSize = true;
+            this.lblActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivo.Location = new System.Drawing.Point(16, 135);
+            this.lblActivo.Name = "lblActivo";
+            this.lblActivo.Size = new System.Drawing.Size(38, 15);
+            this.lblActivo.TabIndex = 5;
+            this.lblActivo.Text = "Activo";
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(93, 30);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(121, 20);
+            this.txtCode.TabIndex = 1;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(93, 64);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(121, 20);
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            // 
+            // cboPlan
+            // 
+            this.cboPlan.FormattingEnabled = true;
+            this.cboPlan.Location = new System.Drawing.Point(93, 100);
+            this.cboPlan.Name = "cboPlan";
+            this.cboPlan.Size = new System.Drawing.Size(121, 21);
+            this.cboPlan.TabIndex = 6;
+            this.cboPlan.SelectedIndexChanged += new System.EventHandler(this.cboPlan_SelectedIndexChanged);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(167, 200);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(86, 200);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnListado
+            // 
+            this.btnListado.Location = new System.Drawing.Point(5, 200);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(75, 23);
+            this.btnListado.TabIndex = 9;
+            this.btnListado.Text = "Listado";
+            this.btnListado.UseVisualStyleBackColor = true;
+            // 
+            // frmRegistro
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(431, 396);
+            this.Controls.Add(this.gbRegistro);
+            this.Name = "frmRegistro";
+            this.Text = "Registro";
+            this.gbRegistro.ResumeLayout(false);
+            this.gbRegistro.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox gbRegistro;
+        private System.Windows.Forms.CheckBox chkActivo;
+        private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblPlan;
+        private System.Windows.Forms.Label lblActivo;
+        private System.Windows.Forms.ComboBox cboPlan;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnListado;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRegistrar;
+    }
+}
