@@ -71,8 +71,9 @@
             this.chkActivo.Location = new System.Drawing.Point(93, 136);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(15, 14);
-            this.chkActivo.TabIndex = 1;
+            this.chkActivo.TabIndex = 3;
             this.chkActivo.UseVisualStyleBackColor = true;
+            this.chkActivo.CheckedChanged += new System.EventHandler(this.chkActivo_CheckedChanged);
             // 
             // lblCode
             // 
@@ -119,16 +120,20 @@
             this.txtNombre.Location = new System.Drawing.Point(93, 64);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // cboPlan
             // 
             this.cboPlan.FormattingEnabled = true;
+            this.cboPlan.Items.AddRange(new object[] {
+            "Plan 1",
+            "Plan 2",
+            "Plan 3"});
             this.cboPlan.Location = new System.Drawing.Point(93, 100);
             this.cboPlan.Name = "cboPlan";
             this.cboPlan.Size = new System.Drawing.Size(121, 21);
-            this.cboPlan.TabIndex = 6;
+            this.cboPlan.TabIndex = 2;
             this.cboPlan.SelectedIndexChanged += new System.EventHandler(this.cboPlan_SelectedIndexChanged);
             // 
             // btnRegistrar
@@ -136,7 +141,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(167, 170);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -146,7 +151,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(86, 170);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -156,7 +161,7 @@
             this.btnListado.Location = new System.Drawing.Point(5, 170);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(75, 23);
-            this.btnListado.TabIndex = 9;
+            this.btnListado.TabIndex = 6;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
             this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
@@ -167,7 +172,7 @@
             this.mskCode.Mask = "99999";
             this.mskCode.Name = "mskCode";
             this.mskCode.Size = new System.Drawing.Size(121, 20);
-            this.mskCode.TabIndex = 10;
+            this.mskCode.TabIndex = 0;
             this.mskCode.ValidatingType = typeof(int);
             // 
             // frmRegistro
@@ -178,6 +183,7 @@
             this.ClientSize = new System.Drawing.Size(275, 226);
             this.Controls.Add(this.gbRegistro);
             this.Name = "frmRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.gbRegistro.ResumeLayout(false);
             this.gbRegistro.PerformLayout();

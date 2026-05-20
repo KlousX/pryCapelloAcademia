@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace pryCapelloAcademia
 {
-
     public partial class frmRegistro : Form
     {
+        string estado;
+        int indiceFila = 0;
+        string[,] lista = new string[2, 4];
+
         public frmRegistro()
         {
             InitializeComponent();
@@ -49,23 +52,47 @@ namespace pryCapelloAcademia
             {
                 MessageBox.Show("Debes ingresar el código");
                 mskCode.Focus();
+                return;
             }
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Debes ingresar un nombre");
                 txtNombre.Focus();
+                return;
             }
             if (cboPlan.SelectedIndex == -1)
             {
                 MessageBox.Show("Debes elegir un plan");
                 cboPlan.Focus();
+                return;
             }
+            if (chkActivo.Checked == true)
+            {
+                estado = "Activo";
+            }
+            else
+            {
+                estado = "Inactivo";
+            }
+
+
+            lista[indiceFila, 0] = Convert.ToString(mskCode.Text);
+            lista[indiceFila, 1] = txtNombre.Text;
+            lista[indiceFila, 2] = Convert.ToString(cboPlan.SelectedIndex);
+            lista[indiceFila, 3] = estado;
+
+            indiceFila++;
+
+            MessageBox.Show("Código: " + mskCode.Text + "\nNombre: " + txtNombre.Text + "\nPlan: " + ToString(cboPlan.SelectedIndex) + "\nEstado: " + estado, "Registro Materia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             mskCode.Clear();
             cboPlan.SelectedIndex = -1;
             txtNombre.Clear();
+        }
 
-            MessageBox.Show("Código: " + mskCode.Text + "\nNombre: " + txtNombre.Text + "\nPlan: " + cboPlan.SelectedIndex, "Registro Materia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        private void chkActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

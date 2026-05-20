@@ -21,7 +21,7 @@ namespace pryCapelloAcademia
         {
             frmRegistro registro = new frmRegistro();
             registro.ShowDialog();
-            this.Hide();
+            this.Close();
         }
     }
 }
