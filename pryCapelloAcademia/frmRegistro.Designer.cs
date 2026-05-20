@@ -34,32 +34,32 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPlan = new System.Windows.Forms.Label();
             this.lblActivo = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cboPlan = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
+            this.mskCode = new System.Windows.Forms.MaskedTextBox();
             this.gbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbRegistro
             // 
             this.gbRegistro.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbRegistro.Controls.Add(this.mskCode);
             this.gbRegistro.Controls.Add(this.btnListado);
             this.gbRegistro.Controls.Add(this.btnCancelar);
             this.gbRegistro.Controls.Add(this.btnRegistrar);
             this.gbRegistro.Controls.Add(this.cboPlan);
-            this.gbRegistro.Controls.Add(this.txtCode);
             this.gbRegistro.Controls.Add(this.txtNombre);
             this.gbRegistro.Controls.Add(this.lblActivo);
             this.gbRegistro.Controls.Add(this.lblPlan);
             this.gbRegistro.Controls.Add(this.chkActivo);
             this.gbRegistro.Controls.Add(this.lblNombre);
             this.gbRegistro.Controls.Add(this.lblCode);
-            this.gbRegistro.Location = new System.Drawing.Point(36, 42);
+            this.gbRegistro.Location = new System.Drawing.Point(12, 12);
             this.gbRegistro.Name = "gbRegistro";
-            this.gbRegistro.Size = new System.Drawing.Size(248, 229);
+            this.gbRegistro.Size = new System.Drawing.Size(248, 204);
             this.gbRegistro.TabIndex = 0;
             this.gbRegistro.TabStop = false;
             this.gbRegistro.Text = "Registro Materia/Asignatura";
@@ -114,14 +114,6 @@
             this.lblActivo.TabIndex = 5;
             this.lblActivo.Text = "Activo";
             // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(93, 30);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(121, 20);
-            this.txtCode.TabIndex = 1;
-            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(93, 64);
@@ -141,37 +133,49 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(167, 200);
+            this.btnRegistrar.Location = new System.Drawing.Point(167, 170);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(86, 200);
+            this.btnCancelar.Location = new System.Drawing.Point(86, 170);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnListado
             // 
-            this.btnListado.Location = new System.Drawing.Point(5, 200);
+            this.btnListado.Location = new System.Drawing.Point(5, 170);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(75, 23);
             this.btnListado.TabIndex = 9;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
+            // 
+            // mskCode
+            // 
+            this.mskCode.Location = new System.Drawing.Point(93, 30);
+            this.mskCode.Mask = "99999";
+            this.mskCode.Name = "mskCode";
+            this.mskCode.Size = new System.Drawing.Size(121, 20);
+            this.mskCode.TabIndex = 10;
+            this.mskCode.ValidatingType = typeof(int);
             // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(431, 396);
+            this.ClientSize = new System.Drawing.Size(275, 226);
             this.Controls.Add(this.gbRegistro);
             this.Name = "frmRegistro";
             this.Text = "Registro";
@@ -190,10 +194,10 @@
         private System.Windows.Forms.Label lblPlan;
         private System.Windows.Forms.Label lblActivo;
         private System.Windows.Forms.ComboBox cboPlan;
-        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnListado;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.MaskedTextBox mskCode;
     }
 }
