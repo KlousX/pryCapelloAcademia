@@ -16,6 +16,11 @@ namespace pryCapelloAcademia
         int indiceFila = 0;
         string[,] lista = new string[2, 4];
 
+        public string[,] devolverRegistro()
+        {
+            return lista;
+        }
+
         public frmRegistro()
         {
             InitializeComponent();
@@ -43,7 +48,8 @@ namespace pryCapelloAcademia
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-
+            frmListado listado = new frmListado(lista);
+            listado.ShowDialog();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -78,19 +84,46 @@ namespace pryCapelloAcademia
 
             lista[indiceFila, 0] = Convert.ToString(mskCode.Text);
             lista[indiceFila, 1] = txtNombre.Text;
-            lista[indiceFila, 2] = Convert.ToString(cboPlan.SelectedIndex);
+            lista[indiceFila, 2] = cboPlan.Text;
             lista[indiceFila, 3] = estado;
 
             indiceFila++;
 
-            MessageBox.Show("Código: " + mskCode.Text + "\nNombre: " + txtNombre.Text + "\nPlan: " + ToString(cboPlan.SelectedIndex) + "\nEstado: " + estado, "Registro Materia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Código: " + mskCode.Text + "\nNombre: " + txtNombre.Text + "\nPlan: " + cboPlan.Text + "\nEstado: " + estado, "Registro Materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             mskCode.Clear();
             cboPlan.SelectedIndex = -1;
             txtNombre.Clear();
+            mskCode.Focus();
         }
 
         private void chkActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrarPlan_Click(object sender, EventArgs e)
+        {
+            frmRegistroPlan plan = new frmRegistroPlan();
+            plan.ShowDialog();
+
+            string[,] planes = plan.devolverPlanes();
+
+            for (int i = 0; i < planes.GetLength(0); i++)
+            {
+                if (planes[i, 0] != null)
+                {
+                    cboPlan.Items.Add(planes[i, 0]);
+                }
+            }
+        }
+
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskCode_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
