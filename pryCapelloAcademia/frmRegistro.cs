@@ -81,6 +81,15 @@ namespace pryCapelloAcademia
                 estado = "Inactivo";
             }
 
+            if (indiceFila >= lista.GetLength(0))
+            {
+                MessageBox.Show("No se pueden ingresar más datos", "Alerta");
+                mskCode.Clear();
+                cboPlan.SelectedIndex = -1;
+                txtNombre.Clear();
+                mskCode.Focus();
+                return;
+            }
 
             lista[indiceFila, 0] = Convert.ToString(mskCode.Text);
             lista[indiceFila, 1] = txtNombre.Text;
