@@ -32,16 +32,16 @@
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.cboPlan = new System.Windows.Forms.ComboBox();
             this.gbBuscar = new System.Windows.Forms.GroupBox();
+            this.mskCode = new System.Windows.Forms.MaskedTextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.rdbPlan = new System.Windows.Forms.RadioButton();
             this.rdbCode = new System.Windows.Forms.RadioButton();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.dgvListado = new System.Windows.Forms.DataGridView();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mskCode = new System.Windows.Forms.MaskedTextBox();
             this.gbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,15 @@
             this.gbBuscar.TabStop = false;
             this.gbBuscar.Text = "Buscar";
             // 
+            // mskCode
+            // 
+            this.mskCode.Location = new System.Drawing.Point(101, 89);
+            this.mskCode.Mask = "99999999999";
+            this.mskCode.Name = "mskCode";
+            this.mskCode.Size = new System.Drawing.Size(123, 20);
+            this.mskCode.TabIndex = 11;
+            this.mskCode.ValidatingType = typeof(int);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(125, 161);
@@ -137,8 +146,8 @@
             // 
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombre,
             this.colCode,
+            this.colNombre,
             this.colPlan,
             this.colActivo});
             this.dgvListado.Location = new System.Drawing.Point(248, 7);
@@ -146,15 +155,15 @@
             this.dgvListado.Size = new System.Drawing.Size(432, 190);
             this.dgvListado.TabIndex = 8;
             // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            // 
             // colCode
             // 
             this.colCode.HeaderText = "Código";
             this.colCode.Name = "colCode";
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
             // 
             // colPlan
             // 
@@ -165,15 +174,6 @@
             // 
             this.colActivo.HeaderText = "Activo";
             this.colActivo.Name = "colActivo";
-            // 
-            // mskCode
-            // 
-            this.mskCode.Location = new System.Drawing.Point(101, 89);
-            this.mskCode.Mask = "99999999999";
-            this.mskCode.Name = "mskCode";
-            this.mskCode.Size = new System.Drawing.Size(123, 20);
-            this.mskCode.TabIndex = 11;
-            this.mskCode.ValidatingType = typeof(int);
             // 
             // frmListado
             // 
@@ -201,10 +201,10 @@
         private System.Windows.Forms.RadioButton rdbCode;
         private System.Windows.Forms.RadioButton rdbNombre;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.MaskedTextBox mskCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivo;
-        private System.Windows.Forms.MaskedTextBox mskCode;
     }
 }

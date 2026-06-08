@@ -15,6 +15,8 @@ namespace pryCapelloAcademia
         string estado;
         int indiceFila = 0;
         string[,] lista = new string[2, 4];
+        string[] planes;
+        
 
         public string[,] devolverRegistro()
         {
@@ -43,13 +45,35 @@ namespace pryCapelloAcademia
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            frmRegistro registro = new frmRegistro();
+            this.Close();
         }
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-            frmListado listado = new frmListado(lista);
+            MessageBox.Show(planes == null ? "NULL" : planes.Length.ToString());
+
+            frmListado listado = new frmListado(lista, planes);
             listado.ShowDialog();
+        }
+
+        private void btnRegistrarPlan_Click(object sender, EventArgs e)
+        {
+            frmRegistroPlan plan = new frmRegistroPlan();
+            plan.ShowDialog();
+            string[] planesRecibidos = plan.devolverPlanes();
+
+            if (planes == null)
+            {
+                planes = planesRecibidos;
+            }
+            else
+            {
+                planes = planes.Concat(planesRecibidos).ToArray();
+            }
+
+            cboPlan.DataSource = null;
+            cboPlan.DataSource = planes;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -109,22 +133,6 @@ namespace pryCapelloAcademia
         private void chkActivo_CheckedChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnRegistrarPlan_Click(object sender, EventArgs e)
-        {
-            frmRegistroPlan plan = new frmRegistroPlan();
-            plan.ShowDialog();
-
-            string[,] planes = plan.devolverPlanes();
-
-            for (int i = 0; i < planes.GetLength(0); i++)
-            {
-                if (planes[i, 0] != null)
-                {
-                    cboPlan.Items.Add(planes[i, 0]);
-                }
-            }
         }
 
         private void frmRegistro_Load(object sender, EventArgs e)

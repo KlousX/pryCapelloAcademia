@@ -29,32 +29,45 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPlan = new System.Windows.Forms.TextBox();
-            this.lblPlan = new System.Windows.Forms.Label();
-            this.bntListado = new System.Windows.Forms.Button();
+            this.listPlanes = new System.Windows.Forms.ListBox();
             this.btnAgregarPlan = new System.Windows.Forms.Button();
+            this.lblPlan = new System.Windows.Forms.Label();
+            this.txtPlan = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.listPlanes);
             this.panel1.Controls.Add(this.btnAgregarPlan);
-            this.panel1.Controls.Add(this.bntListado);
             this.panel1.Controls.Add(this.lblPlan);
             this.panel1.Controls.Add(this.txtPlan);
             this.panel1.Location = new System.Drawing.Point(12, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 88);
+            this.panel1.Size = new System.Drawing.Size(381, 271);
             this.panel1.TabIndex = 0;
             // 
-            // txtPlan
+            // listPlanes
             // 
-            this.txtPlan.Location = new System.Drawing.Point(123, 19);
-            this.txtPlan.Name = "txtPlan";
-            this.txtPlan.Size = new System.Drawing.Size(233, 20);
-            this.txtPlan.TabIndex = 0;
-            this.txtPlan.TextChanged += new System.EventHandler(this.txtPlan_TextChanged);
+            this.listPlanes.FormattingEnabled = true;
+            this.listPlanes.Location = new System.Drawing.Point(20, 45);
+            this.listPlanes.Name = "listPlanes";
+            this.listPlanes.Size = new System.Drawing.Size(336, 186);
+            this.listPlanes.TabIndex = 3;
+            this.listPlanes.SelectedIndexChanged += new System.EventHandler(this.listPlanes_SelectedIndexChanged);
+            // 
+            // btnAgregarPlan
+            // 
+            this.btnAgregarPlan.Location = new System.Drawing.Point(191, 236);
+            this.btnAgregarPlan.Name = "btnAgregarPlan";
+            this.btnAgregarPlan.Size = new System.Drawing.Size(165, 23);
+            this.btnAgregarPlan.TabIndex = 1;
+            this.btnAgregarPlan.Text = "Agregar Plan";
+            this.btnAgregarPlan.UseVisualStyleBackColor = true;
+            this.btnAgregarPlan.Click += new System.EventHandler(this.btnAgregarPlan_Click);
             // 
             // lblPlan
             // 
@@ -65,31 +78,29 @@
             this.lblPlan.TabIndex = 1;
             this.lblPlan.Text = "Nombre del Plan";
             // 
-            // bntListado
+            // txtPlan
             // 
-            this.bntListado.Location = new System.Drawing.Point(20, 50);
-            this.bntListado.Name = "bntListado";
-            this.bntListado.Size = new System.Drawing.Size(165, 23);
-            this.bntListado.TabIndex = 2;
-            this.bntListado.Text = "Listado";
-            this.bntListado.UseVisualStyleBackColor = true;
-            this.bntListado.Click += new System.EventHandler(this.bntListado_Click);
+            this.txtPlan.Location = new System.Drawing.Point(123, 19);
+            this.txtPlan.Name = "txtPlan";
+            this.txtPlan.Size = new System.Drawing.Size(233, 20);
+            this.txtPlan.TabIndex = 0;
+            this.txtPlan.TextChanged += new System.EventHandler(this.txtPlan_TextChanged);
             // 
-            // btnAgregarPlan
+            // btnCancelar
             // 
-            this.btnAgregarPlan.Location = new System.Drawing.Point(191, 50);
-            this.btnAgregarPlan.Name = "btnAgregarPlan";
-            this.btnAgregarPlan.Size = new System.Drawing.Size(165, 23);
-            this.btnAgregarPlan.TabIndex = 1;
-            this.btnAgregarPlan.Text = "Agregar Plan";
-            this.btnAgregarPlan.UseVisualStyleBackColor = true;
-            this.btnAgregarPlan.Click += new System.EventHandler(this.btnAgregarPlan_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(20, 236);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(165, 23);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmRegistroPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 104);
+            this.ClientSize = new System.Drawing.Size(405, 288);
             this.Controls.Add(this.panel1);
             this.Name = "frmRegistroPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -107,6 +118,7 @@
         private System.Windows.Forms.TextBox txtPlan;
         private System.Windows.Forms.Label lblPlan;
         private System.Windows.Forms.Button btnAgregarPlan;
-        private System.Windows.Forms.Button bntListado;
+        private System.Windows.Forms.ListBox listPlanes;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

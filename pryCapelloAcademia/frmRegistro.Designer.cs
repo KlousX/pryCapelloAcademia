@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbRegistro = new System.Windows.Forms.GroupBox();
+            this.btnRegistrarPlan = new System.Windows.Forms.Button();
             this.mskCode = new System.Windows.Forms.MaskedTextBox();
             this.btnListado = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.chkActivo = new System.Windows.Forms.CheckBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
-            this.btnRegistrarPlan = new System.Windows.Forms.Button();
             this.gbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,16 @@
             this.gbRegistro.TabIndex = 0;
             this.gbRegistro.TabStop = false;
             this.gbRegistro.Text = "Registro Materia/Asignatura";
+            // 
+            // btnRegistrarPlan
+            // 
+            this.btnRegistrarPlan.Location = new System.Drawing.Point(114, 132);
+            this.btnRegistrarPlan.Name = "btnRegistrarPlan";
+            this.btnRegistrarPlan.Size = new System.Drawing.Size(100, 23);
+            this.btnRegistrarPlan.TabIndex = 7;
+            this.btnRegistrarPlan.Text = "Registrar Plan";
+            this.btnRegistrarPlan.UseVisualStyleBackColor = true;
+            this.btnRegistrarPlan.Click += new System.EventHandler(this.btnRegistrarPlan_Click);
             // 
             // mskCode
             // 
@@ -110,10 +120,6 @@
             // 
             this.cboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPlan.FormattingEnabled = true;
-            this.cboPlan.Items.AddRange(new object[] {
-            "Plan 1",
-            "Plan 2",
-            "Plan 3"});
             this.cboPlan.Location = new System.Drawing.Point(93, 100);
             this.cboPlan.Name = "cboPlan";
             this.cboPlan.Size = new System.Drawing.Size(121, 21);
@@ -178,16 +184,6 @@
             this.lblCode.Size = new System.Drawing.Size(46, 15);
             this.lblCode.TabIndex = 2;
             this.lblCode.Text = "Código";
-            // 
-            // btnRegistrarPlan
-            // 
-            this.btnRegistrarPlan.Location = new System.Drawing.Point(114, 132);
-            this.btnRegistrarPlan.Name = "btnRegistrarPlan";
-            this.btnRegistrarPlan.Size = new System.Drawing.Size(100, 23);
-            this.btnRegistrarPlan.TabIndex = 7;
-            this.btnRegistrarPlan.Text = "Registrar Plan";
-            this.btnRegistrarPlan.UseVisualStyleBackColor = true;
-            this.btnRegistrarPlan.Click += new System.EventHandler(this.btnRegistrarPlan_Click);
             // 
             // frmRegistro
             // 

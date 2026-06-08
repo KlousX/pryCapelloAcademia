@@ -15,16 +15,21 @@ namespace pryCapelloAcademia
     {
 
         string[,] lista;
+        string[] planes;
 
         public frmListado()
         {
             InitializeComponent();
         }
 
-        public frmListado(string[,] lista)
+        public frmListado(string[,] lista, string[] planesRecibidos)
         {
             InitializeComponent();
             this.lista = lista;
+            this.planes = planesRecibidos;
+
+            cboPlan.DataSource = null;
+            cboPlan.DataSource = planes;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,7 +62,7 @@ namespace pryCapelloAcademia
                         lista[i, 1],
                         lista[i, 2],
                         lista[i, 3]
-                        );
+                        ); 
                     }
                 }  
             }
@@ -65,7 +70,7 @@ namespace pryCapelloAcademia
             {
                 for (int i = 0; i < lista.GetLength(0); i++)
                 {
-                    if (lista[i, 2] == buscarCodigo)
+                    if (lista[i, 0] == buscarCodigo)
                     { 
                         dgvListado.Rows.Add(
                         lista[i, 0],
@@ -80,7 +85,7 @@ namespace pryCapelloAcademia
             {
                 for (int i = 0; i < lista.GetLength(0); i++)
                 {
-                    if (lista[i, 3] == buscarPlan)
+                    if (lista[i, 2] == buscarPlan)
                     {
                         dgvListado.Rows.Add(
                         lista[i, 0],
