@@ -96,6 +96,8 @@ namespace pryCapelloAcademia
                     }
                 }
             }
+
+            cboPlan.SelectedIndex = -1;
         }
     }
 }

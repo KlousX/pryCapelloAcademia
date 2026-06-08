@@ -10,11 +10,34 @@ using System.Windows.Forms;
 
 namespace pryCapelloAcademia
 {
-    public partial class frmInicio : Form
+    public partial class frmMain : Form
     {
-        public frmInicio()
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
+        private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistro registro = new frmRegistro();
+            registro.ShowDialog();
+        }
+
+        private void planToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroPlan registroPlan = new frmRegistroPlan();
+            registroPlan.ShowDialog();
+        }
+
+        private void planesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListado listado = new frmListado();
+            listado.ShowDialog();
         }
     }
 }

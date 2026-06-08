@@ -51,8 +51,6 @@ namespace pryCapelloAcademia
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(planes == null ? "NULL" : planes.Length.ToString());
-
             frmListado listado = new frmListado(lista, planes);
             listado.ShowDialog();
         }

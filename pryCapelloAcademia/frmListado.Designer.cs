@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListado));
             this.txtNombre = new System.Windows.Forms.MaskedTextBox();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.cboPlan = new System.Windows.Forms.ComboBox();
@@ -48,17 +49,19 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(101, 53);
+            this.txtNombre.Location = new System.Drawing.Point(135, 65);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(123, 20);
+            this.txtNombre.Size = new System.Drawing.Size(163, 22);
             this.txtNombre.TabIndex = 3;
             // 
             // rdbTodos
             // 
             this.rdbTodos.AutoSize = true;
-            this.rdbTodos.Location = new System.Drawing.Point(18, 25);
+            this.rdbTodos.Location = new System.Drawing.Point(24, 31);
+            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbTodos.Name = "rdbTodos";
-            this.rdbTodos.Size = new System.Drawing.Size(55, 17);
+            this.rdbTodos.Size = new System.Drawing.Size(68, 20);
             this.rdbTodos.TabIndex = 4;
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos";
@@ -67,9 +70,10 @@
             // cboPlan
             // 
             this.cboPlan.FormattingEnabled = true;
-            this.cboPlan.Location = new System.Drawing.Point(101, 124);
+            this.cboPlan.Location = new System.Drawing.Point(135, 153);
+            this.cboPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboPlan.Name = "cboPlan";
-            this.cboPlan.Size = new System.Drawing.Size(123, 21);
+            this.cboPlan.Size = new System.Drawing.Size(163, 24);
             this.cboPlan.TabIndex = 6;
             // 
             // gbBuscar
@@ -83,27 +87,31 @@
             this.gbBuscar.Controls.Add(this.txtNombre);
             this.gbBuscar.Controls.Add(this.cboPlan);
             this.gbBuscar.Controls.Add(this.rdbTodos);
-            this.gbBuscar.Location = new System.Drawing.Point(12, 7);
+            this.gbBuscar.Location = new System.Drawing.Point(16, 9);
+            this.gbBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbBuscar.Name = "gbBuscar";
-            this.gbBuscar.Size = new System.Drawing.Size(230, 190);
+            this.gbBuscar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBuscar.Size = new System.Drawing.Size(307, 234);
             this.gbBuscar.TabIndex = 7;
             this.gbBuscar.TabStop = false;
             this.gbBuscar.Text = "Buscar";
             // 
             // mskCode
             // 
-            this.mskCode.Location = new System.Drawing.Point(101, 89);
+            this.mskCode.Location = new System.Drawing.Point(135, 110);
+            this.mskCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mskCode.Mask = "99999999999";
             this.mskCode.Name = "mskCode";
-            this.mskCode.Size = new System.Drawing.Size(123, 20);
+            this.mskCode.Size = new System.Drawing.Size(163, 22);
             this.mskCode.TabIndex = 11;
             this.mskCode.ValidatingType = typeof(int);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(125, 161);
+            this.btnBuscar.Location = new System.Drawing.Point(167, 198);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -112,9 +120,10 @@
             // rdbPlan
             // 
             this.rdbPlan.AutoSize = true;
-            this.rdbPlan.Location = new System.Drawing.Point(18, 125);
+            this.rdbPlan.Location = new System.Drawing.Point(24, 154);
+            this.rdbPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbPlan.Name = "rdbPlan";
-            this.rdbPlan.Size = new System.Drawing.Size(46, 17);
+            this.rdbPlan.Size = new System.Drawing.Size(55, 20);
             this.rdbPlan.TabIndex = 9;
             this.rdbPlan.TabStop = true;
             this.rdbPlan.Text = "Plan";
@@ -123,9 +132,10 @@
             // rdbCode
             // 
             this.rdbCode.AutoSize = true;
-            this.rdbCode.Location = new System.Drawing.Point(18, 89);
+            this.rdbCode.Location = new System.Drawing.Point(24, 110);
+            this.rdbCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbCode.Name = "rdbCode";
-            this.rdbCode.Size = new System.Drawing.Size(58, 17);
+            this.rdbCode.Size = new System.Drawing.Size(72, 20);
             this.rdbCode.TabIndex = 8;
             this.rdbCode.TabStop = true;
             this.rdbCode.Text = "Código";
@@ -134,9 +144,10 @@
             // rdbNombre
             // 
             this.rdbNombre.AutoSize = true;
-            this.rdbNombre.Location = new System.Drawing.Point(18, 56);
+            this.rdbNombre.Location = new System.Drawing.Point(24, 69);
+            this.rdbNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbNombre.Name = "rdbNombre";
-            this.rdbNombre.Size = new System.Drawing.Size(62, 17);
+            this.rdbNombre.Size = new System.Drawing.Size(77, 20);
             this.rdbNombre.TabIndex = 7;
             this.rdbNombre.TabStop = true;
             this.rdbNombre.Text = "Nombre";
@@ -150,38 +161,50 @@
             this.colNombre,
             this.colPlan,
             this.colActivo});
-            this.dgvListado.Location = new System.Drawing.Point(248, 7);
+            this.dgvListado.Location = new System.Drawing.Point(331, 9);
+            this.dgvListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvListado.Name = "dgvListado";
-            this.dgvListado.Size = new System.Drawing.Size(432, 190);
+            this.dgvListado.RowHeadersWidth = 51;
+            this.dgvListado.Size = new System.Drawing.Size(576, 234);
             this.dgvListado.TabIndex = 8;
             // 
             // colCode
             // 
             this.colCode.HeaderText = "Código";
+            this.colCode.MinimumWidth = 6;
             this.colCode.Name = "colCode";
+            this.colCode.Width = 125;
             // 
             // colNombre
             // 
             this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
             this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 125;
             // 
             // colPlan
             // 
             this.colPlan.HeaderText = "Plan";
+            this.colPlan.MinimumWidth = 6;
             this.colPlan.Name = "colPlan";
+            this.colPlan.Width = 125;
             // 
             // colActivo
             // 
             this.colActivo.HeaderText = "Activo";
+            this.colActivo.MinimumWidth = 6;
             this.colActivo.Name = "colActivo";
+            this.colActivo.Width = 125;
             // 
             // frmListado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 203);
+            this.ClientSize = new System.Drawing.Size(923, 250);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.gbBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmListado";
             this.Text = "Búsqueda";
             this.gbBuscar.ResumeLayout(false);
