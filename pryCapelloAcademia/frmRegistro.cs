@@ -78,19 +78,19 @@ namespace pryCapelloAcademia
         {
             if (Convert.ToString(mskCode.Text) == "")
             {
-                MessageBox.Show("Debes ingresar el código");
+                MessageBox.Show("Debes ingresar el código", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 mskCode.Focus();
                 return;
             }
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Debes ingresar un nombre");
+                MessageBox.Show("Debes ingresar un nombre", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtNombre.Focus();
                 return;
             }
             if (cboPlan.SelectedIndex == -1)
             {
-                MessageBox.Show("Debes elegir un plan");
+                MessageBox.Show("Debes elegir un plan", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 cboPlan.Focus();
                 return;
             }
@@ -105,11 +105,7 @@ namespace pryCapelloAcademia
 
             if (indiceFila >= lista.GetLength(0))
             {
-                MessageBox.Show("No se pueden ingresar más datos", "Alerta");
-                mskCode.Clear();
-                cboPlan.SelectedIndex = -1;
-                txtNombre.Clear();
-                mskCode.Focus();
+                MessageBox.Show("No se pueden ingresar más datos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
             }
 

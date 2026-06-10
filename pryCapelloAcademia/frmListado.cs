@@ -36,7 +36,7 @@ namespace pryCapelloAcademia
         {
             dgvListado.Rows.Clear();
             string buscarNombre = txtNombre.Text.ToLower();
-            string buscarCodigo = Convert.ToString(mskCode.Text);
+            string buscarCodigo = mskCode.Text;
             string buscarPlan = Convert.ToString(cboPlan.Text);
 
             if (rdbTodos.Checked)
