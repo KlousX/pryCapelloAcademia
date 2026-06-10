@@ -106,6 +106,10 @@ namespace pryCapelloAcademia
             if (indiceFila >= lista.GetLength(0))
             {
                 MessageBox.Show("No se pueden ingresar más datos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                mskCode.Clear();
+                cboPlan.SelectedIndex = -1;
+                txtNombre.Clear();
+                mskCode.Focus();
                 return;
             }
 

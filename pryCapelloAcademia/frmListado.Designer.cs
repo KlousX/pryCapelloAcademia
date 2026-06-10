@@ -50,16 +50,16 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(135, 65);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 22);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 0;
             // 
             // rdbTodos
             // 
             this.rdbTodos.AutoSize = true;
             this.rdbTodos.Location = new System.Drawing.Point(24, 31);
-            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(68, 20);
             this.rdbTodos.TabIndex = 4;
@@ -71,10 +71,10 @@
             // 
             this.cboPlan.FormattingEnabled = true;
             this.cboPlan.Location = new System.Drawing.Point(135, 153);
-            this.cboPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPlan.Margin = new System.Windows.Forms.Padding(4);
             this.cboPlan.Name = "cboPlan";
             this.cboPlan.Size = new System.Drawing.Size(163, 24);
-            this.cboPlan.TabIndex = 6;
+            this.cboPlan.TabIndex = 2;
             // 
             // gbBuscar
             // 
@@ -88,9 +88,9 @@
             this.gbBuscar.Controls.Add(this.cboPlan);
             this.gbBuscar.Controls.Add(this.rdbTodos);
             this.gbBuscar.Location = new System.Drawing.Point(16, 9);
-            this.gbBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.gbBuscar.Name = "gbBuscar";
-            this.gbBuscar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBuscar.Padding = new System.Windows.Forms.Padding(4);
             this.gbBuscar.Size = new System.Drawing.Size(307, 234);
             this.gbBuscar.TabIndex = 7;
             this.gbBuscar.TabStop = false;
@@ -99,20 +99,20 @@
             // mskCode
             // 
             this.mskCode.Location = new System.Drawing.Point(135, 110);
-            this.mskCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskCode.Margin = new System.Windows.Forms.Padding(4);
             this.mskCode.Mask = "99999999999";
             this.mskCode.Name = "mskCode";
             this.mskCode.Size = new System.Drawing.Size(163, 22);
-            this.mskCode.TabIndex = 11;
+            this.mskCode.TabIndex = 1;
             this.mskCode.ValidatingType = typeof(int);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(167, 198);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 28);
-            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
@@ -121,7 +121,7 @@
             // 
             this.rdbPlan.AutoSize = true;
             this.rdbPlan.Location = new System.Drawing.Point(24, 154);
-            this.rdbPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbPlan.Margin = new System.Windows.Forms.Padding(4);
             this.rdbPlan.Name = "rdbPlan";
             this.rdbPlan.Size = new System.Drawing.Size(55, 20);
             this.rdbPlan.TabIndex = 9;
@@ -133,7 +133,7 @@
             // 
             this.rdbCode.AutoSize = true;
             this.rdbCode.Location = new System.Drawing.Point(24, 110);
-            this.rdbCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbCode.Margin = new System.Windows.Forms.Padding(4);
             this.rdbCode.Name = "rdbCode";
             this.rdbCode.Size = new System.Drawing.Size(72, 20);
             this.rdbCode.TabIndex = 8;
@@ -145,7 +145,7 @@
             // 
             this.rdbNombre.AutoSize = true;
             this.rdbNombre.Location = new System.Drawing.Point(24, 69);
-            this.rdbNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.rdbNombre.Name = "rdbNombre";
             this.rdbNombre.Size = new System.Drawing.Size(77, 20);
             this.rdbNombre.TabIndex = 7;
@@ -162,7 +162,7 @@
             this.colPlan,
             this.colActivo});
             this.dgvListado.Location = new System.Drawing.Point(331, 9);
-            this.dgvListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListado.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.RowHeadersWidth = 51;
             this.dgvListado.Size = new System.Drawing.Size(576, 234);
@@ -203,10 +203,12 @@
             this.ClientSize = new System.Drawing.Size(923, 250);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.gbBuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListado";
-            this.Text = "Búsqueda";
+            this.Text = "Búscar materias";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             this.gbBuscar.ResumeLayout(false);
             this.gbBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();

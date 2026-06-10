@@ -47,7 +47,7 @@
             this.panel1.Controls.Add(this.lblPlan);
             this.panel1.Controls.Add(this.txtPlan);
             this.panel1.Location = new System.Drawing.Point(16, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(508, 334);
             this.panel1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(27, 290);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(220, 28);
             this.btnCancelar.TabIndex = 4;
@@ -68,7 +68,7 @@
             this.listPlanes.FormattingEnabled = true;
             this.listPlanes.ItemHeight = 16;
             this.listPlanes.Location = new System.Drawing.Point(27, 55);
-            this.listPlanes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listPlanes.Margin = new System.Windows.Forms.Padding(4);
             this.listPlanes.Name = "listPlanes";
             this.listPlanes.Size = new System.Drawing.Size(447, 228);
             this.listPlanes.TabIndex = 3;
@@ -77,7 +77,7 @@
             // btnAgregarPlan
             // 
             this.btnAgregarPlan.Location = new System.Drawing.Point(255, 290);
-            this.btnAgregarPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarPlan.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarPlan.Name = "btnAgregarPlan";
             this.btnAgregarPlan.Size = new System.Drawing.Size(220, 28);
             this.btnAgregarPlan.TabIndex = 1;
@@ -98,7 +98,7 @@
             // txtPlan
             // 
             this.txtPlan.Location = new System.Drawing.Point(164, 23);
-            this.txtPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlan.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlan.Name = "txtPlan";
             this.txtPlan.Size = new System.Drawing.Size(309, 22);
             this.txtPlan.TabIndex = 0;
@@ -110,8 +110,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 354);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistroPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Plan";

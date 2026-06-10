@@ -16,7 +16,7 @@ namespace pryCapelloAcademia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListado());
+            Application.Run(new frmInicio());
         }
     }
 }

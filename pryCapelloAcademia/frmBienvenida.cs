@@ -19,8 +19,8 @@ namespace pryCapelloAcademia
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            frmRegistro registro = new frmRegistro();
-            registro.ShowDialog();
+            frmMain main = new frmMain();
+            main.ShowDialog();
             this.Close();
         }
     }

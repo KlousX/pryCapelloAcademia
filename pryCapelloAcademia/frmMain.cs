@@ -39,5 +39,16 @@ namespace pryCapelloAcademia
             frmListado listado = new frmListado();
             listado.ShowDialog();
         }
+
+        private void alumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumno registroAlumno = new frmAlumno();
+            registroAlumno.ShowDialog();
+        }
+
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

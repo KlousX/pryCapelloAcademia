@@ -15,6 +15,7 @@ namespace pryCapelloAcademia
     {
 
         int indiceFila = 0;
+        int filaSeleccionada = -1;
         string[,] arrAlumno = new string[2, 8];
 
 
@@ -30,13 +31,19 @@ namespace pryCapelloAcademia
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
-            arrAlumno[indiceFila, 6] = DateTime.Now.ToString("dd/MM/yy HH:mm");
-            lblRegistroXX.Text = arrAlumno[indiceFila, 6];
+            if (indiceFila >= arrAlumno.GetLength(0))
+            {
+                MessageBox.Show("No se pueden añadir más datos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                txtDni.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtDireccion.Clear();
+                txtContacto.Clear();
+                return;
+            }
 
             arrAlumno[indiceFila, 7] = "";
             lblActualizacionXX.Text = "";
-
             dgvAlumnos.Rows.Clear();
 
             if (txtDni.Text == "")
@@ -76,17 +83,6 @@ namespace pryCapelloAcademia
                 return;
             }
 
-            if (indiceFila >= arrAlumno.GetLength(0))
-            {
-                MessageBox.Show("No se pueden añadir más datos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                txtDni.Clear();
-                txtNombre.Clear();
-                txtApellido.Clear();
-                txtDireccion.Clear();
-                txtContacto.Clear();
-                return;
-            }
-
             arrAlumno[indiceFila, 0] = txtDni.Text;
             arrAlumno[indiceFila, 1] = txtNombre.Text;
             arrAlumno[indiceFila, 2] = txtApellido.Text;
@@ -110,14 +106,17 @@ namespace pryCapelloAcademia
 
             }
 
-            indiceFila++;
-
             txtDni.Focus();
             txtDni.Clear();
             txtNombre.Clear();
             txtApellido.Clear();
             txtDireccion.Clear();
             txtContacto.Clear();
+
+            arrAlumno[indiceFila, 6] = DateTime.Now.ToString("dd/MM/yy HH:mm");
+            lblRegistroXX.Text = arrAlumno[indiceFila, 6];
+
+            indiceFila++;
         }
 
         private void frmAlumno_Load(object sender, EventArgs e)
@@ -125,44 +124,16 @@ namespace pryCapelloAcademia
             
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            arrAlumno[indiceFila, 0] = txtDni.Text;
-            arrAlumno[indiceFila, 1] = txtNombre.Text;
-            arrAlumno[indiceFila, 2] = txtApellido.Text;
-            arrAlumno[indiceFila, 3] = txtDireccion.Text;
-            arrAlumno[indiceFila, 4] = txtContacto.Text;
-            arrAlumno[indiceFila, 5] = dtpFechaNacimiento.Value.ToString("dd/MM/yyyy");
-
-            arrAlumno[indiceFila, 7] = DateTime.Now.ToString("dd/MM/yy HH:mm");
-            lblActualizacionXX.Text = arrAlumno[indiceFila, 7];
-
-            dgvAlumnos.Rows.Clear();
-            for (int i = 0; i <arrAlumno.GetLength(0); i++)
-            {
-                if (arrAlumno[i, 0] != null)
-                {
-                    dgvAlumnos.Rows.Add(
-                        arrAlumno[indiceFila, 0],
-                        arrAlumno[indiceFila, 1],
-                        arrAlumno[indiceFila, 2],
-                        arrAlumno[indiceFila, 3],
-                        arrAlumno[indiceFila, 4],
-                        arrAlumno[indiceFila, 5]
-                    );
-                }
-            }
-
-
-            arrAlumno[indiceFila, 7] = DateTime.Now.ToString("dd/MM/yy HH:mm");
-            lblActualizacionXX.Text = arrAlumno[indiceFila, 7];
-        }
-
         private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
-            int filaSeleccionada = e.RowIndex;
+            filaSeleccionada = e.RowIndex;
+
+            if (filaSeleccionada >= indiceFila || filaSeleccionada >= arrAlumno.GetLength(0))
+            {
+                return;
+            }
 
             txtDni.Text = arrAlumno[filaSeleccionada, 0];
             txtNombre.Text = arrAlumno[filaSeleccionada, 1];
@@ -171,7 +142,116 @@ namespace pryCapelloAcademia
             txtContacto.Text = arrAlumno[filaSeleccionada, 4];
             dtpFechaNacimiento.Value = DateTime.Parse(arrAlumno[filaSeleccionada, 5]);
 
-            indiceFila = filaSeleccionada;
+            arrAlumno[filaSeleccionada, 7] = DateTime.Now.ToString("dd/MM/yy HH:mm");
+            lblActualizacionXX.Text = arrAlumno[filaSeleccionada, 7];
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            if (filaSeleccionada == -1)
+            {
+                MessageBox.Show("Seleccione un alumno para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+            dgvAlumnos.Rows.Clear();
+
+            arrAlumno[filaSeleccionada, 0] = txtDni.Text;
+            arrAlumno[filaSeleccionada, 1] = txtNombre.Text;
+            arrAlumno[filaSeleccionada, 2] = txtApellido.Text;
+            arrAlumno[filaSeleccionada, 3] = txtDireccion.Text;
+            arrAlumno[filaSeleccionada, 4] = txtContacto.Text;
+            arrAlumno[filaSeleccionada, 5] = dtpFechaNacimiento.Value.ToString("dd/MM/yyyy");
+            arrAlumno[filaSeleccionada, 7] = DateTime.Now.ToString("dd/MM/yy HH:mm");
+            lblActualizacionXX.Text = arrAlumno[filaSeleccionada, 7];
+
+            for (int i = 0; i < arrAlumno.GetLength(0); i++)
+            {
+                if (arrAlumno[i, 0] != null)
+                {
+                    dgvAlumnos.Rows.Add(
+                        arrAlumno[i, 0],
+                        arrAlumno[i, 1],
+                        arrAlumno[i, 2],
+                        arrAlumno[i, 3],
+                        arrAlumno[i, 4],
+                        arrAlumno[i, 5]
+                    );
+                }
+            }
+
+            txtDni.Focus();
+            txtDni.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDireccion.Clear();
+            txtContacto.Clear();
+
+            filaSeleccionada = -1;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            if (filaSeleccionada == -1)
+            {
+                MessageBox.Show("Seleccione un alumno para eliminar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+
+            for (int i = filaSeleccionada; i < indiceFila - 1; i++)
+            {
+                arrAlumno[i, 0] = arrAlumno[i + 1, 0];
+                arrAlumno[i, 1] = arrAlumno[i + 1, 1];
+                arrAlumno[i, 2] = arrAlumno[i + 1, 2];
+                arrAlumno[i, 3] = arrAlumno[i + 1, 3];
+                arrAlumno[i, 4] = arrAlumno[i + 1, 4];
+                arrAlumno[i, 5] = arrAlumno[i + 1, 5];
+                arrAlumno[i, 6] = arrAlumno[i + 1, 6];
+                arrAlumno[i, 7] = arrAlumno[i + 1, 7];
+            }
+
+            indiceFila--;
+
+            arrAlumno[indiceFila, 0] = null;
+            arrAlumno[indiceFila, 1] = null;
+            arrAlumno[indiceFila, 2] = null;
+            arrAlumno[indiceFila, 3] = null;
+            arrAlumno[indiceFila, 4] = null;
+            arrAlumno[indiceFila, 5] = null;
+            arrAlumno[indiceFila, 6] = null;
+            arrAlumno[indiceFila, 7] = null;
+
+            dgvAlumnos.Rows.Clear();
+
+            for (int i = 0; i < arrAlumno.GetLength(0); i++)
+            {
+                if (arrAlumno[i, 0] != null)
+                {
+                    dgvAlumnos.Rows.Add(
+                        arrAlumno[i, 0],
+                        arrAlumno[i, 1],
+                        arrAlumno[i, 2],
+                        arrAlumno[i, 3],
+                        arrAlumno[i, 4],
+                        arrAlumno[i, 5]
+                        );
+                }
+            }
+
+
+            txtDni.Focus();
+            txtDni.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDireccion.Clear();
+            txtContacto.Clear();
+            lblActualizacionXX.Text = "";
+            lblRegistroXX.Text = "";
+
+            filaSeleccionada = -1;
+
+            MessageBox.Show("Alumno eliminado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

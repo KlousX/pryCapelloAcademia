@@ -61,9 +61,9 @@
             this.gbRegistro.Controls.Add(this.lblNombre);
             this.gbRegistro.Controls.Add(this.lblCode);
             this.gbRegistro.Location = new System.Drawing.Point(16, 15);
-            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.gbRegistro.Name = "gbRegistro";
-            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4);
             this.gbRegistro.Size = new System.Drawing.Size(331, 251);
             this.gbRegistro.TabIndex = 0;
             this.gbRegistro.TabStop = false;
@@ -72,7 +72,7 @@
             // btnRegistrarPlan
             // 
             this.btnRegistrarPlan.Location = new System.Drawing.Point(152, 162);
-            this.btnRegistrarPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarPlan.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarPlan.Name = "btnRegistrarPlan";
             this.btnRegistrarPlan.Size = new System.Drawing.Size(133, 28);
             this.btnRegistrarPlan.TabIndex = 7;
@@ -83,7 +83,7 @@
             // mskCode
             // 
             this.mskCode.Location = new System.Drawing.Point(124, 37);
-            this.mskCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskCode.Margin = new System.Windows.Forms.Padding(4);
             this.mskCode.Mask = "99999";
             this.mskCode.Name = "mskCode";
             this.mskCode.Size = new System.Drawing.Size(160, 22);
@@ -94,7 +94,7 @@
             // btnListado
             // 
             this.btnListado.Location = new System.Drawing.Point(7, 209);
-            this.btnListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListado.Margin = new System.Windows.Forms.Padding(4);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(100, 28);
             this.btnListado.TabIndex = 6;
@@ -105,7 +105,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(115, 209);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 5;
@@ -116,7 +116,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(223, 209);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(100, 28);
             this.btnRegistrar.TabIndex = 4;
@@ -129,7 +129,7 @@
             this.cboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPlan.FormattingEnabled = true;
             this.cboPlan.Location = new System.Drawing.Point(124, 123);
-            this.cboPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPlan.Margin = new System.Windows.Forms.Padding(4);
             this.cboPlan.Name = "cboPlan";
             this.cboPlan.Size = new System.Drawing.Size(160, 24);
             this.cboPlan.TabIndex = 2;
@@ -138,7 +138,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(124, 79);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(160, 22);
             this.txtNombre.TabIndex = 1;
@@ -171,7 +171,7 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkActivo.Location = new System.Drawing.Point(124, 167);
-            this.chkActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkActivo.Margin = new System.Windows.Forms.Padding(4);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(18, 17);
             this.chkActivo.TabIndex = 3;
@@ -207,11 +207,12 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(367, 278);
             this.Controls.Add(this.gbRegistro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro";
+            this.Text = "Registrar materias";
             this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.gbRegistro.ResumeLayout(false);
             this.gbRegistro.PerformLayout();
