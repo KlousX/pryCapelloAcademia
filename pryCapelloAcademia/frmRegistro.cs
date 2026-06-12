@@ -14,8 +14,7 @@ namespace pryCapelloAcademia
     {
         string estado;
         int indiceFila = 0;
-        string[,] lista = new string[2, 4];
-        string[] planes;
+        public static string[,] lista = new string[2, 4];
         
 
         public string[,] devolverRegistro()
@@ -51,7 +50,7 @@ namespace pryCapelloAcademia
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-            frmListado listado = new frmListado(lista, planes);
+            frmListado listado = new frmListado(lista);
             listado.ShowDialog();
         }
 
@@ -59,19 +58,9 @@ namespace pryCapelloAcademia
         {
             frmRegistroPlan plan = new frmRegistroPlan();
             plan.ShowDialog();
-            string[] planesRecibidos = plan.devolverPlanes();
-
-            if (planes == null)
-            {
-                planes = planesRecibidos;
-            }
-            else
-            {
-                planes = planes.Concat(planesRecibidos).ToArray();
-            }
 
             cboPlan.DataSource = null;
-            cboPlan.DataSource = planes;
+            cboPlan.DataSource = frmRegistroPlan.listaPlan;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

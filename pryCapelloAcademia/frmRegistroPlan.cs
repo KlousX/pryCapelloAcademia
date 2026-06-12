@@ -14,8 +14,8 @@ namespace pryCapelloAcademia
     public partial class frmRegistroPlan : Form
     {
 
-        string[] listaPlan = new string[3];
-        int currentRow = 0;
+        public static string[] listaPlan = new string[3];
+        public static int currentRow = 0;
 
         public string[] devolverPlanes()
         {

@@ -14,22 +14,12 @@ namespace pryCapelloAcademia
     public partial class frmListado : Form
     {
 
-        string[,] lista;
-        string[] planes;
-
         public frmListado()
         {
             InitializeComponent();
-        }
-
-        public frmListado(string[,] lista, string[] planesRecibidos)
-        {
-            InitializeComponent();
-            this.lista = lista;
-            this.planes = planesRecibidos;
 
             cboPlan.DataSource = null;
-            cboPlan.DataSource = planes;
+            cboPlan.DataSource = frmRegistroPlan.listaPlan;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,15 +31,15 @@ namespace pryCapelloAcademia
 
             if (rdbTodos.Checked)
             {
-                for (int i = 0; i < lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
                 {
-                    if (lista[i, 0] != null)
+                    if (frmRegistro.lista[i, 0] != null)
                     {
                         dgvListado.Rows.Add(
-                        lista[i, 0],
-                        lista[i, 1],
-                        lista[i, 2],
-                        lista[i, 3]
+                        frmRegistro.lista[i, 0],
+                        frmRegistro.lista[i, 1],
+                        frmRegistro.lista[i, 2],
+                        frmRegistro.lista[i, 3]
                         );
                     }
                 }
@@ -59,23 +49,24 @@ namespace pryCapelloAcademia
             {
                 bool flag = false;
 
-                for (int i = 0; i < lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
                 {
-                    if (lista[i, 1] != null && lista[i, 1].ToLower() == buscarNombre)
-                    { 
+                    if (frmRegistro.lista[i, 1] != null && frmRegistro.lista[i, 1].ToLower() == buscarNombre)
+                    {
                         dgvListado.Rows.Add(
-                        lista[i, 0],
-                        lista[i, 1],
-                        lista[i, 2],
-                        lista[i, 3]
+                        frmRegistro.lista[i, 0],
+                        frmRegistro.lista[i, 1],
+                        frmRegistro.lista[i, 2],
+                        frmRegistro.lista[i, 3]
                         );
-                        
+
                         flag = true;
                     }
                 }
                 if (flag == false)
                 {
                     MessageBox.Show("No se encontró el nombre ingresado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtNombre.Focus();
                 }
             }
 
@@ -83,15 +74,15 @@ namespace pryCapelloAcademia
             {
                 bool flag = false;
 
-                for (int i = 0; i < lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
                 {
-                    if (lista[i, 0] != null && lista[i, 0] == buscarCodigo)
-                    { 
+                    if (frmRegistro.lista[i, 0] != null && frmRegistro.lista[i, 0] == buscarCodigo)
+                    {
                         dgvListado.Rows.Add(
-                        lista[i, 0],
-                        lista[i, 1],
-                        lista[i, 2],
-                        lista[i, 3]
+                        frmRegistro.lista[i, 0],
+                        frmRegistro.lista[i, 1],
+                        frmRegistro.lista[i, 2],
+                        frmRegistro.lista[i, 3]
                         );
 
                         flag = true;
@@ -100,22 +91,32 @@ namespace pryCapelloAcademia
                 if (flag == false)
                 {
                     MessageBox.Show("No se encontró el código ingresado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    mskCode.Focus();
                 }
             }
 
             if (rdbPlan.Checked)
             {
-                for (int i = 0; i < lista.GetLength(0); i++)
+                bool flag = false;
+
+                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
                 {
-                    if (lista[i, 2] != null && lista[i, 2] == buscarPlan)
+                    if (frmRegistro.lista[i, 2] != null && frmRegistro.lista[i, 2] == buscarPlan)
                     {
                         dgvListado.Rows.Add(
-                        lista[i, 0],
-                        lista[i, 1],
-                        lista[i, 2],
-                        lista[i, 3]
+                        frmRegistro.lista[i, 0],
+                        frmRegistro.lista[i, 1],
+                        frmRegistro.lista[i, 2],
+                        frmRegistro.lista[i, 3]
                         );
+
+                        flag = true;
                     }
+                }
+                if (flag == false)
+                {
+                    MessageBox.Show("Seleccione un plan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cboPlan.Focus();
                 }
             }
 
@@ -124,10 +125,18 @@ namespace pryCapelloAcademia
             mskCode.Clear();
             cboPlan.SelectedIndex = -1;
         }
+            
 
         private void frmListado_Load(object sender, EventArgs e)
         {
+            cboPlan.DataSource = null;
+            cboPlan.DataSource = frmRegistroPlan.listaPlan;
             cboPlan.SelectedIndex = -1;
+        }
+
+        private void cboPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
