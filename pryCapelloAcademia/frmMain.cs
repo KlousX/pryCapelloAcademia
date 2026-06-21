@@ -50,5 +50,10 @@ namespace pryCapelloAcademia
         {
 
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+        }
     }
 }

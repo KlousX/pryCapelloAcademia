@@ -50,7 +50,7 @@ namespace pryCapelloAcademia
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-            frmListado listado = new frmListado(lista);
+            frmListado listado = new frmListado();
             listado.ShowDialog();
         }
 
