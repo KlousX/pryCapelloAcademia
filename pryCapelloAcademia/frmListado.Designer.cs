@@ -53,7 +53,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 22);
-            this.txtNombre.TabIndex = 0;
+            this.txtNombre.TabIndex = 2;
             // 
             // rdbTodos
             // 
@@ -62,7 +62,7 @@
             this.rdbTodos.Margin = new System.Windows.Forms.Padding(4);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(68, 20);
-            this.rdbTodos.TabIndex = 4;
+            this.rdbTodos.TabIndex = 0;
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos";
             this.rdbTodos.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             this.cboPlan.Margin = new System.Windows.Forms.Padding(4);
             this.cboPlan.Name = "cboPlan";
             this.cboPlan.Size = new System.Drawing.Size(163, 24);
-            this.cboPlan.TabIndex = 2;
+            this.cboPlan.TabIndex = 6;
             this.cboPlan.SelectedIndexChanged += new System.EventHandler(this.cboPlan_SelectedIndexChanged);
             // 
             // gbBuscar
@@ -104,7 +104,7 @@
             this.mskCode.Mask = "99999999999";
             this.mskCode.Name = "mskCode";
             this.mskCode.Size = new System.Drawing.Size(163, 22);
-            this.mskCode.TabIndex = 1;
+            this.mskCode.TabIndex = 4;
             this.mskCode.ValidatingType = typeof(int);
             // 
             // btnBuscar
@@ -113,7 +113,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 28);
-            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
@@ -125,7 +125,7 @@
             this.rdbPlan.Margin = new System.Windows.Forms.Padding(4);
             this.rdbPlan.Name = "rdbPlan";
             this.rdbPlan.Size = new System.Drawing.Size(55, 20);
-            this.rdbPlan.TabIndex = 9;
+            this.rdbPlan.TabIndex = 5;
             this.rdbPlan.TabStop = true;
             this.rdbPlan.Text = "Plan";
             this.rdbPlan.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.rdbCode.Margin = new System.Windows.Forms.Padding(4);
             this.rdbCode.Name = "rdbCode";
             this.rdbCode.Size = new System.Drawing.Size(72, 20);
-            this.rdbCode.TabIndex = 8;
+            this.rdbCode.TabIndex = 3;
             this.rdbCode.TabStop = true;
             this.rdbCode.Text = "Código";
             this.rdbCode.UseVisualStyleBackColor = true;
@@ -149,7 +149,7 @@
             this.rdbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.rdbNombre.Name = "rdbNombre";
             this.rdbNombre.Size = new System.Drawing.Size(77, 20);
-            this.rdbNombre.TabIndex = 7;
+            this.rdbNombre.TabIndex = 1;
             this.rdbNombre.TabStop = true;
             this.rdbNombre.Text = "Nombre";
             this.rdbNombre.UseVisualStyleBackColor = true;

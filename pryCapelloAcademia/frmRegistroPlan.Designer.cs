@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroPlan));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panMain = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.listPlanes = new System.Windows.Forms.ListBox();
             this.btnAgregarPlan = new System.Windows.Forms.Button();
             this.lblPlan = new System.Windows.Forms.Label();
             this.txtPlan = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.panMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panMain
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.listPlanes);
-            this.panel1.Controls.Add(this.btnAgregarPlan);
-            this.panel1.Controls.Add(this.lblPlan);
-            this.panel1.Controls.Add(this.txtPlan);
-            this.panel1.Location = new System.Drawing.Point(16, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 334);
-            this.panel1.TabIndex = 0;
+            this.panMain.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panMain.Controls.Add(this.btnCancelar);
+            this.panMain.Controls.Add(this.listPlanes);
+            this.panMain.Controls.Add(this.btnAgregarPlan);
+            this.panMain.Controls.Add(this.lblPlan);
+            this.panMain.Controls.Add(this.txtPlan);
+            this.panMain.Location = new System.Drawing.Point(16, 6);
+            this.panMain.Margin = new System.Windows.Forms.Padding(4);
+            this.panMain.Name = "panMain";
+            this.panMain.Size = new System.Drawing.Size(508, 334);
+            this.panMain.TabIndex = 0;
             // 
             // btnCancelar
             // 
@@ -109,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 354);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -117,15 +117,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Plan";
             this.Load += new System.EventHandler(this.frmRegistroPlan_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panMain.ResumeLayout(false);
+            this.panMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panMain;
         private System.Windows.Forms.TextBox txtPlan;
         private System.Windows.Forms.Label lblPlan;
         private System.Windows.Forms.Button btnAgregarPlan;

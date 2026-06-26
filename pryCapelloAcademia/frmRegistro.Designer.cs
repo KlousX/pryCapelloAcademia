@@ -75,7 +75,7 @@
             this.btnRegistrarPlan.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarPlan.Name = "btnRegistrarPlan";
             this.btnRegistrarPlan.Size = new System.Drawing.Size(133, 28);
-            this.btnRegistrarPlan.TabIndex = 7;
+            this.btnRegistrarPlan.TabIndex = 3;
             this.btnRegistrarPlan.Text = "Registrar Plan";
             this.btnRegistrarPlan.UseVisualStyleBackColor = true;
             this.btnRegistrarPlan.Click += new System.EventHandler(this.btnRegistrarPlan_Click);
@@ -97,7 +97,7 @@
             this.btnListado.Margin = new System.Windows.Forms.Padding(4);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(100, 28);
-            this.btnListado.TabIndex = 6;
+            this.btnListado.TabIndex = 7;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
             this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
@@ -108,7 +108,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -119,7 +119,7 @@
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(100, 28);
-            this.btnRegistrar.TabIndex = 4;
+            this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -174,7 +174,7 @@
             this.chkActivo.Margin = new System.Windows.Forms.Padding(4);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(18, 17);
-            this.chkActivo.TabIndex = 3;
+            this.chkActivo.TabIndex = 4;
             this.chkActivo.UseVisualStyleBackColor = true;
             this.chkActivo.CheckedChanged += new System.EventHandler(this.chkActivo_CheckedChanged);
             // 
