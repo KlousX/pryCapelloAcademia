@@ -19,7 +19,7 @@ namespace pryCapelloAcademia
             InitializeComponent();
 
             cboPlan.DataSource = null;
-            cboPlan.DataSource = frmRegistroPlan.listaPlan;
+            cboPlan.DataSource = frmRegistroPlan.DevolverPlanes();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,15 +31,15 @@ namespace pryCapelloAcademia
 
             if (rdbTodos.Checked)
             {
-                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.DevolverRegistro().GetLength(0); i++)
                 {
-                    if (frmRegistro.lista[i, 0] != null)
+                    if (frmRegistro.DevolverRegistro()[i, 0] != null)
                     {
                         dgvListado.Rows.Add(
-                        frmRegistro.lista[i, 0],
-                        frmRegistro.lista[i, 1],
-                        frmRegistro.lista[i, 2],
-                        frmRegistro.lista[i, 3]
+                        frmRegistro.DevolverRegistro()[i, 0],
+                        frmRegistro.DevolverRegistro()[i, 1],
+                        frmRegistro.DevolverRegistro()[i, 2],
+                        frmRegistro.DevolverRegistro()[i, 3]
                         );
                     }
                 }
@@ -49,15 +49,15 @@ namespace pryCapelloAcademia
             {
                 bool flag = false;
 
-                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.DevolverRegistro().GetLength(0); i++)
                 {
-                    if (frmRegistro.lista[i, 1] != null && frmRegistro.lista[i, 1].ToLower() == buscarNombre)
+                    if (frmRegistro.DevolverRegistro()[i, 1] != null && frmRegistro.DevolverRegistro()[i, 1].ToLower() == buscarNombre)
                     {
                         dgvListado.Rows.Add(
-                        frmRegistro.lista[i, 0],
-                        frmRegistro.lista[i, 1],
-                        frmRegistro.lista[i, 2],
-                        frmRegistro.lista[i, 3]
+                        frmRegistro.DevolverRegistro()[i, 0],
+                        frmRegistro.DevolverRegistro()[i, 1],
+                        frmRegistro.DevolverRegistro()[i, 2],
+                        frmRegistro.DevolverRegistro()[i, 3]
                         );
 
                         flag = true;
@@ -74,15 +74,15 @@ namespace pryCapelloAcademia
             {
                 bool flag = false;
 
-                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.DevolverRegistro().GetLength(0); i++)
                 {
-                    if (frmRegistro.lista[i, 0] != null && frmRegistro.lista[i, 0] == buscarCodigo)
+                    if (frmRegistro.DevolverRegistro()[i, 0] != null && frmRegistro.DevolverRegistro()[i, 0] == buscarCodigo)
                     {
                         dgvListado.Rows.Add(
-                        frmRegistro.lista[i, 0],
-                        frmRegistro.lista[i, 1],
-                        frmRegistro.lista[i, 2],
-                        frmRegistro.lista[i, 3]
+                        frmRegistro.DevolverRegistro()[i, 0],
+                        frmRegistro.DevolverRegistro()[i, 1],
+                        frmRegistro.DevolverRegistro()[i, 2],
+                        frmRegistro.DevolverRegistro()[i, 3]
                         );
 
                         flag = true;
@@ -99,15 +99,15 @@ namespace pryCapelloAcademia
             {
                 bool flag = false;
 
-                for (int i = 0; i < frmRegistro.lista.GetLength(0); i++)
+                for (int i = 0; i < frmRegistro.DevolverRegistro().GetLength(0); i++)
                 {
-                    if (frmRegistro.lista[i, 2] != null && frmRegistro.lista[i, 2] == buscarPlan)
+                    if (frmRegistro.DevolverRegistro()[i, 2] != null && frmRegistro.DevolverRegistro()[i, 2] == buscarPlan)
                     {
                         dgvListado.Rows.Add(
-                        frmRegistro.lista[i, 0],
-                        frmRegistro.lista[i, 1],
-                        frmRegistro.lista[i, 2],
-                        frmRegistro.lista[i, 3]
+                        frmRegistro.DevolverRegistro()[i, 0],
+                        frmRegistro.DevolverRegistro()[i, 1],
+                        frmRegistro.DevolverRegistro()[i, 2],
+                        frmRegistro.DevolverRegistro()[i, 3]
                         );
 
                         flag = true;
@@ -130,7 +130,7 @@ namespace pryCapelloAcademia
         private void frmListado_Load(object sender, EventArgs e)
         {
             cboPlan.DataSource = null;
-            cboPlan.DataSource = frmRegistroPlan.listaPlan;
+            cboPlan.DataSource = frmRegistroPlan.DevolverPlanes();
             cboPlan.SelectedIndex = -1;
         }
 

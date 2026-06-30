@@ -17,7 +17,7 @@ namespace pryCapelloAcademia
         public static string[,] lista = new string[2, 4];
         
 
-        public string[,] devolverRegistro()
+        public static string[,] DevolverRegistro()
         {
             return lista;
         }
@@ -60,7 +60,7 @@ namespace pryCapelloAcademia
             plan.ShowDialog();
 
             cboPlan.DataSource = null;
-            cboPlan.DataSource = frmRegistroPlan.listaPlan;
+            cboPlan.DataSource = frmRegistroPlan.DevolverPlanes();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -124,7 +124,8 @@ namespace pryCapelloAcademia
 
         private void frmRegistro_Load(object sender, EventArgs e)
         {
-
+            cboPlan.DataSource = null;
+            cboPlan.DataSource = frmRegistroPlan.DevolverPlanes();
         }
 
         private void mskCode_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

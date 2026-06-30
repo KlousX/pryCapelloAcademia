@@ -17,7 +17,7 @@ namespace pryCapelloAcademia
         public static string[] listaPlan = new string[3];
         public static int currentRow = 0;
 
-        public string[] devolverPlanes()
+        public static string[] DevolverPlanes()
         {
             string[] resultado = new string[currentRow];
 
